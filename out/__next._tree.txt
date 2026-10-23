@@ -1,0 +1,3 @@
+:HL["/nyxbotwebsite/_next/static/chunks/1kdc4aq7sw4wc.css","style"]
+1:[["children",{"s":"__PAGE__","h":160}]]
+0:{"b":"egsyRmLJDkVVqsfwRPh5C","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
