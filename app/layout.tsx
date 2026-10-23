@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: 'Bring strategic Mafia matches to your Discord server.',
     type: 'website',
   },
-  icons: { icon: '/icon.svg', apple: '/apple-icon.png' },
+  icons: { icon: '/nyxbotwebsite/icon.svg', apple: '/nyxbotwebsite/apple-icon.png' },
 }
 
 export const viewport: Viewport = {
