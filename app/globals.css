@@ -131,3 +131,33 @@ a:focus-visible,button:focus-visible{outline:3px solid #ffd36d;outline-offset:4p
 @keyframes bubble-pop{0%,100%{transform:rotate(9deg) scale(1)}50%{transform:rotate(5deg) scale(1.04)}}
 @media(max-width:760px){.mascot-wrap{width:205px;right:23%;top:15%}.sticker-strip{margin:-10px 8px 30px}}
 @media(prefers-reduced-motion:reduce){.mascot-wrap,.comic-bubble{animation:none}}
+
+
+/* ILLUSTRATED COMIC WORLD — original lightweight SVG art */
+.comic-city-strip{max-width:1100px;margin:72px auto 0;padding:0 7%;display:grid;grid-template-columns:.72fr 1.28fr;align-items:center;gap:30px}
+.comic-city-copy{padding:26px 0}
+.comic-city-copy h2,.evidence-copy h2{font:1000 clamp(38px,5vw,62px)/.95 Impact,'Arial Black',sans-serif;letter-spacing:-.025em;text-transform:uppercase;text-shadow:3px 3px 0 #6f2824;margin:0}
+.comic-city-copy>p:not(.eyebrow),.evidence-copy>p:not(.eyebrow){color:#e0cbb9;font-size:14px;line-height:1.75;max-width:360px}
+.comic-city-stamp{display:inline-block;margin-top:13px;padding:10px 13px;background:#ffd36d;color:#211313;border:3px solid #171113;border-radius:7px;box-shadow:4px 4px 0 #080606;font:1000 10px 'Arial Black',sans-serif;transform:rotate(-3deg)}
+.comic-city-art{min-width:0;transform:rotate(1deg);filter:drop-shadow(6px 7px 0 #080606)}
+.comic-city-art img{display:block;width:100%;height:auto;border:4px solid #171113;border-radius:20px}
+.evidence-section{max-width:1240px;display:grid;grid-template-columns:.68fr 1.32fr;gap:38px;align-items:center}
+.evidence-copy{padding:10px 0}
+.evidence-board{display:block;width:100%;height:auto;filter:drop-shadow(6px 7px 0 #080606);transform:rotate(-.7deg)}
+.evidence-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.evidence-tags span{padding:8px 10px;border:2px solid #ffd36d;border-radius:7px;color:#ffd36d;font:900 9px monospace;letter-spacing:.08em}
+.role-illustration{display:block;width:100%;height:112px;object-fit:contain;margin:0 auto 12px;position:relative;z-index:1;filter:drop-shadow(3px 4px 0 #090606);transition:transform .25s}
+.role-card:hover .role-illustration{transform:translateY(-4px) rotate(3deg) scale(1.04)}
+.role-icon{position:relative;z-index:1;margin-bottom:18px}
+.role-card h3,.role-card p,.role-index,.role-line{z-index:1}
+.role-card h3,.role-card p,.role-index,.role-line{position:relative}
+.sticker-strip{margin-top:-10px}
+@media(max-width:800px){
+ .comic-city-strip{margin:42px auto 0;padding:0 24px;grid-template-columns:1fr;gap:10px}
+ .comic-city-copy{padding:10px 0}
+ .comic-city-art{margin:0 3px}
+ .evidence-section{grid-template-columns:1fr;gap:22px}
+ .evidence-board{margin-top:4px}
+ .role-illustration{height:105px}
+}
+@media(prefers-reduced-motion:reduce){.role-illustration{transition:none}}
