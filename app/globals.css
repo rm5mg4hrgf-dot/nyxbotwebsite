@@ -246,3 +246,34 @@ html{scroll-behavior:smooth}
  .manga-progress span{animation:none;transform:scaleX(1)}
  .manga-panel,.manga-panel img,.panel-spark{transition:none}
 }
+
+
+/* EXTRA ANIME-CARTOON MOTION PASS */
+@keyframes nyxMascotFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-17px) rotate(2deg)}}
+@keyframes nyxComicPop{0%,100%{transform:rotate(8deg) scale(1)}50%{transform:rotate(13deg) scale(1.12)}}
+@keyframes nyxBubbleWiggle{0%,100%{transform:rotate(-6deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-7px)}}
+@keyframes nyxActionFlash{0%,100%{filter:drop-shadow(0 0 0 #ffd36d);transform:scale(1) rotate(-7deg)}50%{filter:drop-shadow(0 0 12px #ffd36d);transform:scale(1.12) rotate(-2deg)}}
+@keyframes nyxCityBlink{0%,90%,100%{opacity:.72}92%,96%{opacity:1}}
+@keyframes nyxPanelBounce{0%{transform:translateY(48px) scale(.9) rotate(-4deg);opacity:0;filter:blur(3px)}65%{transform:translateY(-8px) scale(1.025) rotate(1deg);opacity:1;filter:none}100%{transform:translateY(0) scale(1) rotate(0);opacity:1;filter:none}}
+@keyframes nyxSpeedLines{0%{transform:translateX(-120%) skewX(-25deg);opacity:0}20%{opacity:.7}100%{transform:translateX(240%) skewX(-25deg);opacity:0}}
+.mascot-wrap{transform-origin:50% 85%;animation:nyxMascotFloat 4.2s ease-in-out infinite;filter:drop-shadow(9px 12px 0 #09070766)}
+.mascot-wrap img{transition:filter .25s,transform .25s;filter:saturate(1.2) contrast(1.04)}
+.mascot-wrap:hover img{transform:scale(1.06) rotate(-3deg);filter:saturate(1.5) contrast(1.08)}
+.comic-bubble{animation:nyxBubbleWiggle 3.4s ease-in-out infinite;transform-origin:80% 90%;box-shadow:5px 6px 0 #090707}
+.comic-splat{animation:nyxComicPop 2.6s ease-in-out infinite;transform-origin:center;filter:drop-shadow(4px 5px 0 #090707)}
+.cartoon-tag{animation:nyxActionFlash 3.1s ease-in-out infinite}
+.city i{animation:nyxCityBlink 7s linear infinite}
+.city i:nth-child(2n){animation-delay:1.7s}
+.hero-orbit{animation:orbit 15s linear infinite}
+.orbit-two{animation-direction:reverse;animation-duration:22s}
+.manga-panel-grid .manga-panel{will-change:transform}
+.manga-panel img{transform-origin:50% 65%}
+.manga-panel:hover img{transform:scale(1.045) rotate(-1deg)}
+.manga-panel.panel-active .panel-spark{animation:nyxComicPop .8s ease-in-out infinite}
+.manga-dialogue{animation:dialogueFloat 5s ease-in-out infinite}
+.dialogue-quote{transition:transform .25s,box-shadow .25s}
+.dialogue-quote:hover{transform:rotate(1deg) translateY(-4px);box-shadow:7px 8px 0 #090707}
+.button-primary,.nav-cta{position:relative;overflow:hidden}
+.button-primary:after,.nav-cta:after{content:"";position:absolute;inset:-20% auto -20% -45%;width:28%;background:#fff9df66;transform:skewX(-24deg);animation:nyxSpeedLines 4.5s ease-in-out infinite}
+@keyframes dialogueFloat{0%,100%{translate:0 0}50%{translate:0 -5px}}
+@media(prefers-reduced-motion:reduce){.mascot-wrap,.comic-bubble,.comic-splat,.cartoon-tag,.city i,.hero-orbit,.manga-dialogue,.manga-panel.panel-active .panel-spark,.button-primary:after,.nav-cta:after{animation:none!important}.mascot-wrap img,.manga-panel img{transition:none!important}}
