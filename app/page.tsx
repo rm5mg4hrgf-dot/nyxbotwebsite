@@ -143,6 +143,41 @@ export default function Page() {
 
       <section className="evidence-section section scroll-pop" id="case-files"><div className="evidence-copy"><p className="eyebrow">CASE FILE / 006</p><h2>Connect the clues.<br /><em>Catch the caper.</em></h2><p>Watch the room, compare stories, and see who cracks under a little cartoon detective pressure.</p><div className="evidence-tags"><span>01 / SUSPECTS</span><span>02 / CLUES</span><span>03 / VOTES</span></div></div><img className="evidence-board" src="/nyxbotwebsite/comic-evidence-board.svg" alt="Illustrated NYX detective desk with a suspect file, clue wall, and vote meter" /></section>
 
+
+      <section className="character-files-section section scroll-pop" id="detectives">
+        <div className="character-files-heading">
+          <div><p className="eyebrow">CASE ARCHIVE / 007 — CLASSIFIED</p><h2>Brains behind<br /><em>the mystery.</em></h2><p className="character-files-intro">Anime masterminds, sharp-eyed detectives, and cinematic crime-family legends. Scroll through the files—each portrait reveals a new suspect.</p></div>
+          <div className="archive-stamp">NYX<br />CASE<br />FILES</div>
+        </div>
+        <div className="character-filter-bar" role="group" aria-label="Filter character files">
+          {[['all','ALL FILES'],['anime','ANIME DETECTIVES'],['godfather','THE GODFATHER I & II'],['departed','THE DEPARTED']].map(([value,label]) => <button type="button" key={value} className={activeCrewFilter === value ? 'active' : ''} onClick={() => setActiveCrewFilter(value)} aria-pressed={activeCrewFilter === value}>{label}</button>)}
+        </div>
+        <div className="character-files-grid">
+          {[
+            {name:'L Lawliet',image:'l-lawliet.svg',world:'DEATH NOTE',type:'anime',note:'The quiet observer who sees what others miss.'},
+            {name:'Light Yagami',image:'light-yagami.svg',world:'DEATH NOTE',type:'anime',note:'A brilliant strategist with a dangerous secret.'},
+            {name:'Near',image:'near.svg',world:'DEATH NOTE',type:'anime',note:'Patient, precise, and always several moves ahead.'},
+            {name:'Misa Amane',image:'misa-amane.svg',world:'DEATH NOTE',type:'anime',note:'A bold wildcard who changes every investigation.'},
+            {name:'Conan Edogawa',image:'conan-edogawa.svg',world:'DETECTIVE CONAN',type:'anime',note:'Tiny detective. Enormous attention to detail.'},
+            {name:'Ranpo Edogawa',image:'ranpo-edogawa.svg',world:'MYSTERY FILES',type:'anime',note:'A deduction specialist who spots the hidden pattern.'},
+            {name:'Sherlock Holmes',image:'sherlock-holmes.svg',world:'MYSTERY DETECTIVE',type:'anime',note:'Observation turns ordinary details into evidence.'},
+            {name:'Hajime Kindaichi',image:'kindaichi.svg',world:'MYSTERY FILES',type:'anime',note:'A case-solving mind that refuses to quit.'},
+            {name:'Vito Corleone',image:'vito-corleone.svg',world:'THE GODFATHER',type:'godfather',note:'An old-school boss whose quiet words carry weight.'},
+            {name:'Michael Corleone',image:'michael-corleone.svg',world:'THE GODFATHER',type:'godfather',note:'A calculated successor who keeps his plans hidden.'},
+            {name:'Sonny Corleone',image:'sonny-corleone.svg',world:'THE GODFATHER',type:'godfather',note:'Impulsive, fiercely loyal, and hard to predict.'},
+            {name:'Tom Hagen',image:'tom-hagen.svg',world:'THE GODFATHER',type:'godfather',note:'The composed adviser who thinks three steps ahead.'},
+            {name:'Frank Costello',image:'frank-costello.svg',world:'THE DEPARTED',type:'departed',note:'A ruthless underworld operator with a public smile.'},
+            {name:'Billy Costigan',image:'billy-costigan.svg',world:'THE DEPARTED',type:'departed',note:'An undercover detective balancing two identities.'},
+            {name:'Colin Sullivan',image:'colin-sullivan.svg',world:'THE DEPARTED',type:'departed',note:'A polished insider with secrets of his own.'},
+            {name:'Dignam',image:'dignam.svg',world:'THE DEPARTED',type:'departed',note:'Blunt instincts, sharp questions, no patience for lies.'}
+          ].filter((character) => activeCrewFilter === 'all' || character.type === activeCrewFilter).map((character, index) => <article className="character-file-card scroll-pop" key={character.image} style={{'--card-delay': ((index % 4) * 90) + 'ms'} as React.CSSProperties}>
+            <div className="character-image-wrap"><img src={'/nyxbotwebsite/characters/' + character.image} alt={character.name + ' original comic portrait'} loading="lazy" /><span className="character-file-number">FILE / {String(index + 1).padStart(2,'0')}</span><span className="character-eye" aria-hidden="true">✦</span></div>
+            <div className="character-file-copy"><span className="character-world">{character.world}</span><h3>{character.name}</h3><p>{character.note}</p><span className="character-status"><i /> PROFILE UNLOCKED</span></div>
+          </article>)}
+        </div>
+        <div className="archive-endnote"><span /> END OF CURRENT FILES — KEEP SCROLLING FOR THE NEXT CLUE <span /></div>
+      </section>
+
       <section className="section roles-section scroll-pop" id="roles"><div className="section-heading centered"><p className="eyebrow">03 / Meet the suspects</p><h2>Everybody’s got<br /><em>a secret.</em></h2></div><div className="sticker-strip" aria-hidden="true"><img src="/nyxbotwebsite/comic-stickers.svg" alt="" /></div><div className="roles-grid">{roles.map(([title, description, Icon, color]) => <article className={`role-card role-${color} scroll-pop`} key={title}><img className="role-illustration" src={`/nyxbotwebsite/characters/${title.toLowerCase() === 'townsperson' ? 'town' : title.toLowerCase()}.svg`} alt={`${title} cartoon character`} /><div className="role-icon"><Icon size={23} /></div><span className="role-index">ROLE / 0{roles.findIndex((r) => r[0] === title) + 1}</span><h3>{title}</h3><p>{description}</p><div className="role-line" /></article>)}</div></section>
 
       <section className="commands-section section scroll-pop" id="commands"><div className="commands-copy"><p className="eyebrow">04 / Talk like a boss</p><h2>Keep it cool.<br /><em>Make your move.</em></h2><p>Start a match, tune the rules, and read the room—all without leaving Discord.</p><a className="text-link" href={REPO_URL}>View source on GitHub <ArrowUpRight size={16} /></a></div><div className="commands-list">{commands.map(([command, description], i) => <div className={`command-row ${openCommand === i ? 'expanded' : ''}`} key={command}><button className="command-trigger" onClick={() => setOpenCommand(openCommand === i ? -1 : i)}><code>{command}</code><span>{openCommand === i ? <ChevronDown className="rotate" size={17} /> : <ChevronDown size={17} />}</span></button>{openCommand === i && <div className="command-detail"><span>{description}</span><button aria-label={`Copy ${command}`} onClick={() => copyCommand(command)}>{copied === command ? <Check size={15} /> : <Copy size={15} />}{copied === command ? 'Copied' : 'Copy'}</button></div>}</div>)}</div></section>
