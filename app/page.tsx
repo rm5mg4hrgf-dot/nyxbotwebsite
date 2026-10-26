@@ -150,7 +150,7 @@ export default function Page() {
           <div className="archive-stamp">NYX<br />CASE<br />FILES</div>
         </div>
         <div className="character-filter-bar" role="group" aria-label="Filter character files">
-          {[['all','ALL FILES'],['anime','ANIME DETECTIVES'],['godfather','THE GODFATHER I & II'],['departed','THE DEPARTED']].map(([value,label]) => <button type="button" key={value} className={activeCrewFilter === value ? 'active' : ''} onClick={() => setActiveCrewFilter(value)} aria-pressed={activeCrewFilter === value}>{label}</button>)}
+          {[['all','ALL FILES'],['anime','ANIME DETECTIVES'],['godfather','CRIME-FAMILY BOSSES'],['departed','UNDERCOVER FILES']].map(([value,label]) => <button type="button" key={value} className={activeCrewFilter === value ? 'active' : ''} onClick={() => setActiveCrewFilter(value)} aria-pressed={activeCrewFilter === value}>{label}</button>)}
         </div>
         <div className="character-files-grid">
           {[
