@@ -75,6 +75,7 @@ export default function Page() {
   const [copied, setCopied] = useState<string | null>(null)
   const [openCommand, setOpenCommand] = useState(0)
   const [activePanel, setActivePanel] = useState(0)
+  const [activeCrewFilter, setActiveCrewFilter] = useState('all')
 
   useEffect(() => {
     const targets = document.querySelectorAll<HTMLElement>('.scroll-pop')
@@ -92,7 +93,7 @@ export default function Page() {
     }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' })
     targets.forEach((target) => observer.observe(target))
     return () => observer.disconnect()
-  }, [])
+  }, [activeCrewFilter])
 
   const copyCommand = async (command: string) => {
     await navigator.clipboard?.writeText(command)
@@ -107,14 +108,14 @@ export default function Page() {
       <header className="site-header">
         <a className="brand" href="#home" aria-label="NYX home"><span className="brand-mark"><Moon size={17} /></span><span>NYX</span></a>
         <nav className={`desktop-nav ${menuOpen ? 'open' : ''}`} aria-label="Primary navigation">
-          {['Features', 'Roles', 'Commands', 'How It Works', 'Community'].map((item) => <a key={item} href={`#${item.toLowerCase().replaceAll(' ', '-')}`} onClick={() => setMenuOpen(false)}>{item}</a>)}
+          {['Features', 'Roles', 'Detectives', 'Commands', 'How It Works', 'Community'].map((item) => <a key={item} href={`#${item.toLowerCase().replaceAll(' ', '-')}`} onClick={() => setMenuOpen(false)}>{item}</a>)}
           <a className="nav-cta" href={INVITE_URL}>Invite NYX <ArrowRight size={15} /></a>
         </nav>
         <button className="menu-button" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
       </header>
 
       <section className="hero" id="home">
-        <div className="hero-orbit orbit-one" /><div className="hero-orbit orbit-two" />
+        <div className="hero-orbit orbit-one" /><div className="hero-orbit orbit-two" /><div className="hero-pfp-watermark" aria-hidden="true"><img src={LOGO_URL} alt="" /></div>
         <div className="hero-copy">
           <p className="eyebrow"><span className="eyebrow-line" /> WELCOME TO THE UNDERWORLD</p>
           <h1>Welcome to<br /><em>the Mafia.</em></h1>
