@@ -3,10 +3,10 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'NYX — The night has a mind of its own',
-  description: 'A strategic Discord Mafia experience for people who love the long night.',
+  title: 'NYX — Mafia Club | A cartoonish Discord Mafia bot',
+  description: 'A cartoonish Mafia social-deduction game for Discord: secret roles, dramatic votes, and chaotic late-night strategy.',
   generator: 'v0.app',
-  metadataBase: new URL('https://nyxbot.vercel.app'),
+  metadataBase: new URL('https://rm5mg4hrgf-dot.github.io/nyxbotwebsite'),
   openGraph: {
     title: 'NYX — The night has a mind of its own',
     description: 'Bring strategic Mafia matches to your Discord server.',
