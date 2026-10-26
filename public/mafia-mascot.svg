@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 470" fill="none">
+<defs><filter id="shadow" x="0" y="0" width="150%" height="150%"><feDropShadow dx="7" dy="9" stdDeviation="0" flood-color="#090606"/></filter></defs>
+<g filter="url(#shadow)" stroke="#171113" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
+ <path d="M82 155 49 83 127 111M338 155 370 83 293 111" fill="#f05b51"/>
+ <path d="M94 122Q210 60 326 122L347 250Q339 335 210 354Q81 335 73 250Z" fill="#f7d4a2"/>
+ <path d="M87 170Q128 130 168 177M253 177Q294 130 333 170" stroke="#171113" stroke-width="13"/>
+ <path d="M123 205Q153 181 179 208L168 231Q144 240 123 222Z" fill="#fff2d9"/>
+ <path d="M241 208Q267 181 297 205L297 222Q276 240 252 231Z" fill="#fff2d9"/>
+ <circle cx="153" cy="211" r="9" fill="#171113" stroke="none"/><circle cx="268" cy="211" r="9" fill="#171113" stroke="none"/>
+ <path d="M195 243 211 230 226 245 211 259Z" fill="#f05b51"/>
+ <path d="M179 282Q210 302 241 282" stroke="#171113" stroke-width="8"/>
+ <path d="M64 143Q210 104 356 143L348 160Q210 128 72 160Z" fill="#ffd36d"/>
+ <path d="M91 143Q111 61 210 61Q309 61 329 143Z" fill="#282021"/>
+ <path d="M48 148Q210 116 372 148L362 169Q210 141 58 169Z" fill="#f05b51"/>
+ <path d="M179 350 153 389 127 436 290 436 267 389 242 350Z" fill="#fff0d4"/>
+ <path d="M154 386 210 419 267 386 289 436 131 436Z" fill="#f05b51"/>
+ <path d="M193 391 210 419 227 391" fill="#ffd36d"/>
+ <path d="M102 374Q67 391 63 430L108 443 142 398M318 374Q353 391 357 430L312 443 278 398" fill="#282021"/>
+ <path d="M119 397 151 419M301 397 269 419" stroke="#ffd36d" stroke-width="7"/>
+ <path d="M184 332 210 350 236 332" stroke="#ffd36d" stroke-width="8"/>
+</g>
+<g stroke="#ffd36d" stroke-width="7" stroke-linecap="round"><path d="M36 220 49 232M24 244 43 247M374 220 361 232M386 244 367 247"/></g>
+<path d="M319 54 328 31 337 54 360 63 337 72 328 95 319 72 296 63Z" fill="#ffd36d" stroke="#171113" stroke-width="6"/>
+<path d="M77 60 83 45 89 60 104 66 89 72 83 87 77 72 62 66Z" fill="#f05b51" stroke="#171113" stroke-width="5"/>
+</svg>
