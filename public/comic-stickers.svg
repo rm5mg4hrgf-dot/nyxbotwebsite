@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" fill="none">
+<g stroke="#171113" stroke-width="6" stroke-linejoin="round">
+<path d="M45 23 58 48 86 44 70 66 83 91 56 82 37 103 36 74 10 62 38 53Z" fill="#ffd36d"/>
+<path d="M145 22Q181 9 215 22L222 51 206 70 165 70 146 53Z" fill="#f05b51"/><path d="M160 42 170 32 180 42M190 42 200 32 210 42" stroke="#fff2d9" stroke-width="5"/>
+<path d="M278 22 302 30 323 17 329 44 351 60 328 76 321 103 298 88 271 96 271 68 251 51 273 42Z" fill="#fff2d9"/>
+<path d="M401 23 425 12 449 23 460 47 448 68 423 76 401 63 389 43Z" fill="#ffd36d"/><path d="M408 44 420 36 432 44M432 44 444 36 452 44" stroke="#171113" stroke-width="5"/>
+<path d="M504 27Q545 6 577 33L583 63 563 81 520 76 501 55Z" fill="#8ed7f5"/>
+</g>
+<g fill="#171113" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle"><text x="183" y="57" font-size="17" fill="#fff2d9">SUS</text><text x="302" y="60" font-size="20">?!</text><text x="537" y="57" font-size="15">BOSS</text></g>
+</svg>
