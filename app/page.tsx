@@ -102,6 +102,7 @@ export default function Page() {
 
   return (
     <main className="nyx-site">
+      <div className="manga-progress" aria-hidden="true"><span /></div>
       <div className="grain" aria-hidden="true" />
       <header className="site-header">
         <a className="brand" href="#home" aria-label="NYX home"><span className="brand-mark"><Moon size={17} /></span><span>NYX</span></a>
