@@ -41,7 +41,17 @@ jobs:
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
+      - name: Verify static export
+        run: |
+          test -f out/index.html
+          test -f out/manga/panel-night.svg
+          test -f out/manga/panel-suspect.svg
+          test -f out/manga/panel-vote.svg
+          test -f out/manga/panel-reveal.svg
+          echo "Static export and comic artwork are present."
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
